@@ -2,13 +2,13 @@ import java.util.ArrayList;
 
 public class Paddock_Carn extends Paddocks {
 
-    public Paddock_Carn(String name, int Capacity) {
-        super(name, Capacity);
+    public Paddock_Carn(String name, int capacity) {
+        super(name, capacity);
     }
 
 
     public String getName() {
-        return getName();
+        return super.getName();
     }
 
     @Override

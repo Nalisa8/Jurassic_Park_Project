@@ -1,11 +1,11 @@
 public class Dinosaur_Herb  extends Dinosaur{
+  private String spiece;
 
-    private String breed;
-    private  int heigth;
-
-    public Dinosaur_Herb(String name, String type) {
-        super(name, type);
-        this.breed = breed;
-        this.heigth = heigth;
+    public Dinosaur_Herb(String spiece, String name, int heigth) {
+        super(name, heigth);
+        this.spiece = spiece;
     }
+
+
+
 }

@@ -1,12 +1,10 @@
 public class Dinosaur_Carn extends Dinosaur{
 
-
     private String spiece;
-    private  int heigth;
-
-    public Dinosaur_Carn(String name, String type) {
-        super(name, type);
-        this.spiece = spiece;
-        this.heigth = heigth;
+    public Dinosaur_Carn(String name, int heigth) {
+        super(name, heigth);
     }
+    public String getName() { return super.getName(); }
+
+    public int getHeigth() {return super.getHeigth();}
 }
