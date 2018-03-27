@@ -1,3 +1,5 @@
+import java.Food;
+
 public class DinosaurHerb extends Dinosaur{
 
     public DinosaurHerb(String name, int heigth) {
@@ -8,6 +10,10 @@ public class DinosaurHerb extends Dinosaur{
 
     public int getHeigth() {return super.getHeigth();}
 
+    public int foodInTheBelly(){ return super.getStomach().size();}
+
+    public void feed(Food food){ super.getStomach().add(food);
+    }
 
 
 }

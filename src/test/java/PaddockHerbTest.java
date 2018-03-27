@@ -55,11 +55,8 @@ public class PaddockHerbTest {
 
 //    be able to transfer Herbivores between paddocks
 
-    @Test
-    public int CanTransferDinosaurHerbInToPaddocks(){
+//    @Test
+//    public int CanTransferDinosaurHerbInToPaddocks(){
 
 
-
-
-    }
 }

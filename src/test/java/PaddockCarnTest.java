@@ -47,7 +47,7 @@ public class PaddockCarnTest {
     }
 
     @Test
-    public void CanRemoveDinosaurFromPaddoCarn() {
+    public void CanRemoveDinosaurFromPaddockCarn() {
         paddock_carn.remove(dinosaur1);
         assertEquals(1,paddock_carn.dinosaurCount());
     }

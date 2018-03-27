@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class PaddockHerb extends Paddock implements ITransfer {
+public class PaddockHerb extends Paddock  {
 
     public PaddockHerb(String name, int capacity) {
         super(name, capacity);
@@ -29,18 +29,19 @@ public class PaddockHerb extends Paddock implements ITransfer {
     public void remove(Dinosaur dinosaur){
         super.getList().remove(dinosaur);
     }
-//    be able to transfer Herbivores between paddocks.
+    //    be able to transfer Herbivores between paddocks\
+
+//    public void transfer(ArrayList<Dinosaur> getList) {
+//        if(DinosaurHerb : Paddock != DinosaurCarn : Paddock){
+//        return DinosaurHerb : PaddockHerb;}
+//    }
 
 
-    public int transfer() {
-        return super.getList().add(1);
-    }
+//
+//    public void  transferDinosaurHerbInToPaddocks() {
+//        if (transfer() = DinosaurHerb) {
+//
+//        }
 
-}
-
-
-
-
-    ;}
 
 }
