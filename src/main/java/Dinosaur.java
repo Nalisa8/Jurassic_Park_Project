@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public abstract class  Dinosaur {
     private String name;
-    private  int heigth;
+    private int heigth;
     private ArrayList<String>stomach;
 
 

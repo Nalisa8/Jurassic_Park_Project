@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public abstract class Paddocks {
-    private ArrayList<Dinosaur>list = new ArrayList<>();
+public abstract class Paddock {
+    private ArrayList<Dinosaur> list;
     private String name;
     private  int capacity;
 
-    public Paddocks (String name, int capacity){
+    public Paddock(String name, int capacity){
         this.name = name;
         this.capacity = capacity;
         this.list = new ArrayList<>();
@@ -18,12 +18,13 @@ public abstract class Paddocks {
 
     public ArrayList<Dinosaur> getList() { return list; }
 
-    public int DinosaurCount(){return list.size();}
+    public int dinosaurCount(){return list.size();}
 
-    public void add(Dinosaur dinosaur){list.add(dinosaur);}
-
-    public void remove(Dinosaur dinosaur){list.remove(dinosaur);}
-
+//    public int add(Dinosaur) {
+//        return 1;
+//    }
+//
+//    public void remove(){list.remove(1);}
 
 
 
