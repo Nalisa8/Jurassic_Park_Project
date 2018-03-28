@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,14 +13,20 @@ public class PaddockCarnTest {
     DinosaurCarn dinosaur2;
     DinosaurCarn dinosaur3;
 
+    DinosaurHerb dinosaur4;
+    DinosaurHerb dinosaur5;
+
 
     @Before
     public void before() {
         paddock_carn = new PaddockCarn("Fauna", 20);
 
-        dinosaur1 = new DinosaurCarn("Bobby", 3);
-        dinosaur2 = new DinosaurCarn("Graham", 7);
-        dinosaur3 = new DinosaurCarn("Renato", 4);
+        dinosaur1 = new DinosaurCarn("Bobby", 3, "carnivorous");
+        dinosaur2 = new DinosaurCarn("Graham", 7,"carnivorous");
+        dinosaur3 = new DinosaurCarn("Renato", 4,"carnivorous");
+
+        dinosaur4 = new DinosaurHerb("Finn", 9,"herbivore");
+        dinosaur5 = new DinosaurHerb("Kat", 6,"herbivore");
 
     }
 
@@ -36,7 +43,7 @@ public class PaddockCarnTest {
     }
 
     @Test
-    public void CapacityStartEmpty() {
+    public void capacityStartEmpty() {
         assertEquals(0, paddock_carn.dinosaurCount());
     }
     //    add / remove dinosaurs to paddocks
@@ -47,10 +54,22 @@ public class PaddockCarnTest {
     }
 
     @Test
-    public void CanRemoveDinosaurFromPaddockCarn() {
+    public void canRemoveDinosaurFromPaddockCarn() {
         paddock_carn.remove(dinosaur1);
-        assertEquals(1,paddock_carn.dinosaurCount());
+        assertEquals(0,paddock_carn.dinosaurCount());
     }
+    
+    @Test
+    public void canRemoveDinosaurHerbFromPaddockCarn(){
+
+        paddock_carn.add(dinosaur2);
+        paddock_carn.add(dinosaur4);
+        paddock_carn.transfer();
+        assertEquals(2,paddock_carn.getList().size());
+
+    }
+    
+    
 }
 
 

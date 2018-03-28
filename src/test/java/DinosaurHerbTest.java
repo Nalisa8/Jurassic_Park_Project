@@ -12,7 +12,7 @@ public class DinosaurHerbTest {
 
     @Before
     public void before(){
-        dinosaurHerb = new DinosaurHerb("Shana", 6);
+        dinosaurHerb = new DinosaurHerb("Shana", 6,"herbivore");
         food = new Food("fish");
     }
 
@@ -22,18 +22,18 @@ public class DinosaurHerbTest {
     }
 
     @Test
-    public void HasHeigth(){
+    public void hasHeigth(){
         assertEquals(6, dinosaurHerb.getHeigth());
     }
 
     //    feed dinosaurs
 
     @Test
-    public void HasEmptyStomach(){
+    public void hasEmptyStomach(){
         assertEquals(0, dinosaurHerb.foodInTheBelly());
     }
     @Test
-    public void CanFeedDinosaur(){
+    public void canFeedDinosaur(){
         dinosaurHerb.feed(food);
         assertEquals(1,dinosaurHerb.foodInTheBelly());
     }

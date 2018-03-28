@@ -37,12 +37,17 @@ public class PaddockCarn extends Paddock implements ITransfer{
 //    be able to transfer Herbivores between paddocks.
 
     @Override
-    public String transfer() {
-        return null;
+    public  void transfer() {
+        ArrayList<Dinosaur> list = new ArrayList<>();
+       for(Dinosaur dinosaur : super.getList()){
+           if (dinosaur.getType().equals("Herbivore")){
+               list.add(dinosaur);
+           }
+       }
+       for(Dinosaur dinosaur :list){
+           super.getList().remove(dinosaur);
+       }
+
     }
-
-
-
-
 
 }

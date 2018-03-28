@@ -14,7 +14,7 @@ public class DinosaurCarnTest {
 
     @Before
     public void before(){
-        dinosaurCarn = new DinosaurCarn("Bobby", 3);
+        dinosaurCarn = new DinosaurCarn("Bobby", 3,"carnivorous");
         food = new Food("fish");
     }
     @Test

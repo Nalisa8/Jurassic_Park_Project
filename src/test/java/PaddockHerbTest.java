@@ -13,9 +13,9 @@ public class PaddockHerbTest {
     public void before() {
         paddock_herb = new PaddockHerb("Flora", 30);
 
-        dinosaur1 = new DinosaurHerb("Rohn", 5);
-        dinosaur2 = new DinosaurHerb("Meggy", 3);
-        dinosaur3 = new DinosaurHerb("Albert", 7);
+        dinosaur1 = new DinosaurHerb("Rohn", 5,"herbivore");
+        dinosaur2 = new DinosaurHerb("Meggy", 3,"herbivore");
+        dinosaur3 = new DinosaurHerb("Albert", 7,"herbivore");
     }
 
 

@@ -1,4 +1,4 @@
 public interface ITransfer {
-  String transfer();
+  void transfer();
 
 }
