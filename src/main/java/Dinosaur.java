@@ -12,8 +12,6 @@ public abstract class  Dinosaur {
     this.heigth = heigth;
     this.stomach = new ArrayList<>();
 
-
-
  }
 
     public String getName() {
@@ -25,6 +23,8 @@ public abstract class  Dinosaur {
     public ArrayList<Food> getStomach() {
         return stomach;
     }
+
+
 }
 
 

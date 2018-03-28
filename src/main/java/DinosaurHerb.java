@@ -10,6 +10,8 @@ public class DinosaurHerb extends Dinosaur{
 
     public int getHeigth() {return super.getHeigth();}
 
+    //    feed dinosaurs
+
     public int foodInTheBelly(){ return super.getStomach().size();}
 
     public void feed(Food food){ super.getStomach().add(food);

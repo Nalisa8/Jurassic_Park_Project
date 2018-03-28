@@ -10,10 +10,12 @@ public class DinosaurCarnTest {
 
 
     DinosaurCarn dinosaurCarn;
+    Food food;
 
     @Before
     public void before(){
         dinosaurCarn = new DinosaurCarn("Bobby", 3);
+        food = new Food("fish");
     }
     @Test
     public void hasName() {
@@ -25,6 +27,8 @@ public class DinosaurCarnTest {
         assertEquals(3, dinosaurCarn.getHeigth());
     }
 
+    //    feed dinosaurs
+
     @Test
     public void HasEmptyStomach(){
         assertEquals(0, dinosaurCarn.foodInTheBelly());
@@ -32,7 +36,7 @@ public class DinosaurCarnTest {
 
     @Test
     public void CanFeedDinosaur(){
-        dinosaurCarn.feed(Food);
+        dinosaurCarn.feed(food);
         assertEquals(1,dinosaurCarn.foodInTheBelly());
     }
 
