@@ -1,3 +1,5 @@
+import Dinosaurs.Dinosaur;
+
 import java.util.ArrayList;
 
 public class PaddockHerb extends Paddock  {
@@ -31,15 +33,15 @@ public class PaddockHerb extends Paddock  {
     }
     //    be able to transfer Herbivores between paddocks\
 
-//    public void transfer(ArrayList<Dinosaur> getList) {
-//        if(DinosaurHerb : Paddock != DinosaurCarn : Paddock){
-//        return DinosaurHerb : PaddockHerb;}
+//    public void transfer(ArrayList<Dinosaurs.Dinosaur> getList) {
+//        if(Dinosaurs.DinosaurHerb : Paddock != Dinosaurs.DinosaurCarn : Paddock){
+//        return Dinosaurs.DinosaurHerb : PaddockHerb;}
 //    }
 
 
 //
 //    public void  transferDinosaurHerbInToPaddocks() {
-//        if (transfer() = DinosaurHerb) {
+//        if (transfer() = Dinosaurs.DinosaurHerb) {
 //
 //        }
 

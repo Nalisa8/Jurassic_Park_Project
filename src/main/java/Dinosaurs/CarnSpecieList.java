@@ -1,3 +1,5 @@
+package Dinosaurs;
+
 public enum CarnSpecieList {
 
     TYRANNOSAURUS("Tyrannosaurus",5),

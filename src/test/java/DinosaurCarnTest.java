@@ -1,14 +1,13 @@
+import Dinosaurs.DinosaurCarn;
+import Dinosaurs.Food;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.Food;
-import java.util.ArrayList;
+//import Dinosaurs.Food;
 
 import static org.junit.Assert.assertEquals;
 
 public class DinosaurCarnTest {
-
-
     DinosaurCarn dinosaurCarn;
     Food food;
 
@@ -23,22 +22,27 @@ public class DinosaurCarnTest {
     }
 
     @Test
-    public void HasHeigth(){
+    public void hasHeigth(){
         assertEquals(3, dinosaurCarn.getHeigth());
     }
+
+    @Test
+    public void hasType(){
+        assertEquals("carnivorous", dinosaurCarn.getType());
+    }
+
 
     //    feed dinosaurs
 
     @Test
-    public void HasEmptyStomach(){
+    public void hasEmptyStomach(){
         assertEquals(0, dinosaurCarn.foodInTheBelly());
     }
 
     @Test
-    public void CanFeedDinosaur(){
+    public void canFeedDinosaur(){
         dinosaurCarn.feed(food);
         assertEquals(1,dinosaurCarn.foodInTheBelly());
     }
-
 
 }

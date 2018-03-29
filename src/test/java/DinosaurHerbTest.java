@@ -1,7 +1,7 @@
+import Dinosaurs.DinosaurHerb;
+import Dinosaurs.Food;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.Food;
 
 import static org.junit.Assert.assertEquals;
 
@@ -18,7 +18,7 @@ public class DinosaurHerbTest {
 
     @Test
     public void hasName() {
-        assertEquals("Bobby", dinosaurHerb.getName());
+        assertEquals("Shana", dinosaurHerb.getName());
     }
 
     @Test
@@ -32,6 +32,7 @@ public class DinosaurHerbTest {
     public void hasEmptyStomach(){
         assertEquals(0, dinosaurHerb.foodInTheBelly());
     }
+
     @Test
     public void canFeedDinosaur(){
         dinosaurHerb.feed(food);

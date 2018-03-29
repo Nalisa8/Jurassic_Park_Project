@@ -1,8 +1,8 @@
+import Dinosaurs.CarnSpecieList;
+import Dinosaurs.DinosaurCarn;
+import Dinosaurs.DinosaurHerb;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -19,7 +19,7 @@ public class PaddockCarnTest {
 
     @Before
     public void before() {
-        paddock_carn = new PaddockCarn("Fauna", 20);
+        paddock_carn = new PaddockCarn("Fauna", 20,(CarnSpecieList.TYRANNOSAURUS));
 
         dinosaur1 = new DinosaurCarn("Bobby", 3, "carnivorous");
         dinosaur2 = new DinosaurCarn("Graham", 7,"carnivorous");
@@ -31,15 +31,21 @@ public class PaddockCarnTest {
     }
 
     @Test
-    public void hasName() {
+    public void canGetName() {
         assertEquals("Fauna", paddock_carn.getName());
         System.out.println("You are in " + paddock_carn.getName() + " Paddock");
     }
 
     @Test
-    public void hasCapacity() {
+    public void canGetCapacity() {
         assertEquals(20, paddock_carn.getCapacity());
         System.out.println("it can contain up to " + paddock_carn.getCapacity() + " Dinosaurs.");
+    }
+
+
+    @Test
+    public void canGetSpecie(){
+        assertEquals(CarnSpecieList.TYRANNOSAURUS, paddock_carn.getSpecie());
     }
 
     @Test
@@ -66,6 +72,12 @@ public class PaddockCarnTest {
         paddock_carn.add(dinosaur4);
         paddock_carn.transfer();
         assertEquals(2,paddock_carn.getList().size());
+
+    }
+
+    @Test
+
+    public  void cantAddDifferentCarnDinosaurToThisPaddock(){
 
     }
     

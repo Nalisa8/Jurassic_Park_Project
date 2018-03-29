@@ -1,7 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import java.Food;
+import Dinosaurs.Food;
 
 import static org.junit.Assert.assertEquals;
 

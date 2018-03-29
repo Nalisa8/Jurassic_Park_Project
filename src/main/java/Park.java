@@ -1,4 +1,3 @@
-import java.Food;
 import java.util.ArrayList;
 
 public class Park {
@@ -38,4 +37,6 @@ public class Park {
     public void remove(Visitor visitor) {
         list.remove(visitor);
     }
+
+
 }
