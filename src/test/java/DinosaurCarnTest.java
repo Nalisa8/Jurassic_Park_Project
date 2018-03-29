@@ -1,3 +1,4 @@
+import Dinosaurs.CarnSpecieList;
 import Dinosaurs.DinosaurCarn;
 import Dinosaurs.Food;
 import org.junit.Before;
@@ -13,7 +14,7 @@ public class DinosaurCarnTest {
 
     @Before
     public void before(){
-        dinosaurCarn = new DinosaurCarn("Bobby", 3,"carnivorous");
+        dinosaurCarn = new DinosaurCarn("Bobby", 3,"carnivorous", CarnSpecieList.TYRANNOSAURUS);
         food = new Food("fish");
     }
     @Test

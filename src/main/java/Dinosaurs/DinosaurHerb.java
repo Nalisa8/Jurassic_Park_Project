@@ -2,6 +2,8 @@ package Dinosaurs;
 
 import Dinosaurs.Dinosaur;
 
+import java.util.ArrayList;
+
 public class DinosaurHerb extends Dinosaur {
 
 
@@ -22,6 +24,10 @@ public class DinosaurHerb extends Dinosaur {
 
     public void feed(Food food){ super.getStomach().add(food);
     }
+
+    //    be able to transfer Herbivores between paddocks.
+
+
 
 
 }

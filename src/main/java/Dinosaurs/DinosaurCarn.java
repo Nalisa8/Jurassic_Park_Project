@@ -3,10 +3,12 @@ import Dinosaurs.Food;
 
 public class DinosaurCarn extends Dinosaur {
 
+    private CarnSpecieList specieType;
 
-
-    public DinosaurCarn(String name, int heigth, String type) {
+    public DinosaurCarn(String name, int heigth, String type,CarnSpecieList specieType) {
         super(name, heigth,type);
+
+        this.specieType = specieType;
     }
 
 
@@ -15,6 +17,8 @@ public class DinosaurCarn extends Dinosaur {
     public int getHeigth() {return super.getHeigth();}
 
     public String getType(){ return super.getType();}
+
+    public CarnSpecieList getSpecieType(){ return this.specieType;}
 
 //    feed dinosaurs
 

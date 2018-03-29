@@ -1,9 +1,10 @@
 import Dinosaurs.CarnSpecieList;
 import Dinosaurs.Dinosaur;
+import Dinosaurs.DinosaurCarn;
 
 import java.util.ArrayList;
 
-public class PaddockCarn extends Paddock implements ITransfer {
+public class PaddockCarn extends Paddock {
 
     private CarnSpecieList specieType;
 
@@ -34,7 +35,7 @@ public class PaddockCarn extends Paddock implements ITransfer {
 
 //    add / remove dinosaurs to paddocks
 
-    public void add(Dinosaur dinosaur) {
+    public void add(DinosaurCarn dinosaur) {
         if (canAddDinosaurToThisPaddock(dinosaur)) {
             super.getList().add(dinosaur);
         } else {
@@ -47,32 +48,16 @@ public class PaddockCarn extends Paddock implements ITransfer {
     }
 
 
-//    be able to transfer Herbivores between paddocks.
 
-    @Override
-    public void transfer() {
-        ArrayList<Dinosaur> list = new ArrayList<>();
-        for (Dinosaur dinosaur : super.getList()) {
-            if (dinosaur.getType().equals("Herbivore")) {
-                list.add(dinosaur);
-            }
-        }
-        for (Dinosaur dinosaur : list) {
-            super.getList().remove(dinosaur);
-        }
-
-    }
 //    Dinosaurs marked as carnivores can only be placed with dinosaurs of the same type
 
-      public boolean canAddDinosaurToThisPaddock(Dinosaur dinoTryingToAdd) {
+      public boolean canAddDinosaurToThisPaddock(DinosaurCarn dinoTryingToAdd) {
 
-        if (specieType.equals(dinoTryingToAdd.getType())) {
-            System.out.println("This dinosaur goes in a different paddock for carnivores");
-            return false;
-        }
-        //else if (specieType.equals(dinoTryingToAdd.getType())) {
-            System.out.println("This dinosaur goes in the paddock of same specie");
+        if (specieType.equals(dinoTryingToAdd.getSpecieType())) {
+            System.out.println("This dinosaur goes in the paddock for same specie");
             return true;
-        //}
+        }
+            System.out.println("This dinosaur goes in a different the paddock ");
+            return false;
     }
 }
